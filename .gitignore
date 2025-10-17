@@ -1,0 +1,24 @@
+# Node basics
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment and credentials
+.env
+.env.*
+!.env.example    # keep a safe example version for teammates
+
+# Data outputs (auto-generated files)
+src/data/schema.json
+src/data/content_map.json
+src/data/content_snapshot.json
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Editor cruft
+.vscode/
+.idea/
+vibe.md
