@@ -1,6 +1,6 @@
 # 🧩 Contentful Schema Documentation (with Field Types)
 
-Generated on: 10/17/2025, 6:51:53 PM
+Generated on: 10/17/2025, 7:12:04 PM
 
 This document includes field names and their corresponding types extracted from your Contentful GraphQL schema.
 
@@ -10,20 +10,20 @@ This document includes field names and their corresponding types extracted from 
 **Entries fetched:** 3
 
 **Fields:**
-- _id: Unknown
-- author: Unknown
-- body: Unknown
-- category: Unknown
-- contentfulMetadata: Unknown
-- date: Unknown
-- excerpt: Unknown
-- image: Unknown
-- linkedFrom: Unknown
-- seoDescription: Unknown
-- seoTitle: Unknown
-- slug: Unknown
-- sys: Unknown
-- title: Unknown
+- _id: ID
+- author: Entry
+- body: BlogPostBody
+- category: String
+- contentfulMetadata: ContentfulMetadata
+- date: DateTime
+- excerpt: String
+- image: Asset
+- linkedFrom: BlogPostLinkingCollections
+- seoDescription: String
+- seoTitle: String
+- slug: String
+- sys: Sys
+- title: String
 
 ---
 
@@ -31,14 +31,14 @@ This document includes field names and their corresponding types extracted from 
 **Entries fetched:** 1
 
 **Fields:**
-- _id: Unknown
-- contentCollection: Unknown
-- contentfulMetadata: Unknown
-- description: Unknown
-- image: Unknown
-- linkedFrom: Unknown
-- sys: Unknown
-- title: Unknown
+- _id: ID
+- contentCollection: HomepageContentCollection
+- contentfulMetadata: ContentfulMetadata
+- description: String
+- image: Asset
+- linkedFrom: HomepageLinkingCollections
+- sys: Sys
+- title: String
 
 ---
 
@@ -46,13 +46,13 @@ This document includes field names and their corresponding types extracted from 
 **Entries fetched:** 3
 
 **Fields:**
-- _id: Unknown
-- contentfulMetadata: Unknown
-- heading: Unknown
-- image: Unknown
-- linkedFrom: Unknown
-- sys: Unknown
-- text: Unknown
+- _id: ID
+- contentfulMetadata: ContentfulMetadata
+- heading: String
+- image: Asset
+- linkedFrom: HomepageBenefitLinkingCollections
+- sys: Sys
+- text: String
 
 ---
 
@@ -60,13 +60,13 @@ This document includes field names and their corresponding types extracted from 
 **Entries fetched:** 2
 
 **Fields:**
-- _id: Unknown
-- contentCollection: Unknown
-- contentfulMetadata: Unknown
-- heading: Unknown
-- linkedFrom: Unknown
-- sys: Unknown
-- text: Unknown
+- _id: ID
+- contentCollection: HomepageBenefitListContentCollection
+- contentfulMetadata: ContentfulMetadata
+- heading: String
+- linkedFrom: HomepageBenefitListLinkingCollections
+- sys: Sys
+- text: String
 
 ---
 
@@ -74,15 +74,15 @@ This document includes field names and their corresponding types extracted from 
 **Entries fetched:** 2
 
 **Fields:**
-- _id: Unknown
-- contentfulMetadata: Unknown
-- heading: Unknown
-- image: Unknown
-- kicker: Unknown
-- linkedFrom: Unknown
-- linksCollection: Unknown
-- sys: Unknown
-- text: Unknown
+- _id: ID
+- contentfulMetadata: ContentfulMetadata
+- heading: String
+- image: Asset
+- kicker: String
+- linkedFrom: HomepageCtaLinkingCollections
+- linksCollection: HomepageCtaLinksCollection
+- sys: Sys
+- text: String
 
 ---
 
@@ -90,15 +90,15 @@ This document includes field names and their corresponding types extracted from 
 **Entries fetched:** 3
 
 **Fields:**
-- _id: Unknown
-- contentfulMetadata: Unknown
-- heading: Unknown
-- image: Unknown
-- kicker: Unknown
-- linkedFrom: Unknown
-- linksCollection: Unknown
-- sys: Unknown
-- text: Unknown
+- _id: ID
+- contentfulMetadata: ContentfulMetadata
+- heading: String
+- image: Asset
+- kicker: String
+- linkedFrom: HomepageFeatureLinkingCollections
+- linksCollection: HomepageFeatureLinksCollection
+- sys: Sys
+- text: String
 
 ---
 
@@ -106,14 +106,14 @@ This document includes field names and their corresponding types extracted from 
 **Entries fetched:** 1
 
 **Fields:**
-- _id: Unknown
-- contentCollection: Unknown
-- contentfulMetadata: Unknown
-- heading: Unknown
-- kicker: Unknown
-- linkedFrom: Unknown
-- sys: Unknown
-- text: Unknown
+- _id: ID
+- contentCollection: HomepageFeatureListContentCollection
+- contentfulMetadata: ContentfulMetadata
+- heading: String
+- kicker: String
+- linkedFrom: HomepageFeatureListLinkingCollections
+- sys: Sys
+- text: String
 
 ---
 
@@ -121,16 +121,16 @@ This document includes field names and their corresponding types extracted from 
 **Entries fetched:** 1
 
 **Fields:**
-- _id: Unknown
-- contentfulMetadata: Unknown
-- heading: Unknown
-- image: Unknown
-- kicker: Unknown
-- linkedFrom: Unknown
-- linksCollection: Unknown
-- subhead: Unknown
-- sys: Unknown
-- text: Unknown
+- _id: ID
+- contentfulMetadata: ContentfulMetadata
+- heading: String
+- image: Asset
+- kicker: String
+- linkedFrom: HomepageHeroLinkingCollections
+- linksCollection: HomepageHeroLinksCollection
+- subhead: String
+- sys: Sys
+- text: String
 
 ---
 
@@ -138,12 +138,12 @@ This document includes field names and their corresponding types extracted from 
 **Entries fetched:** 3
 
 **Fields:**
-- _id: Unknown
-- contentfulMetadata: Unknown
-- href: Unknown
-- linkedFrom: Unknown
-- sys: Unknown
-- text: Unknown
+- _id: ID
+- contentfulMetadata: ContentfulMetadata
+- href: String
+- linkedFrom: HomepageLinkLinkingCollections
+- sys: Sys
+- text: String
 
 ---
 
@@ -151,12 +151,12 @@ This document includes field names and their corresponding types extracted from 
 **Entries fetched:** 1
 
 **Fields:**
-- _id: Unknown
-- contentfulMetadata: Unknown
-- linkedFrom: Unknown
-- linksCollection: Unknown
-- name: Unknown
-- sys: Unknown
+- _id: ID
+- contentfulMetadata: ContentfulMetadata
+- linkedFrom: HomepageLinkGroupLinkingCollections
+- linksCollection: HomepageLinkGroupLinksCollection
+- name: String
+- sys: Sys
 
 ---
 
@@ -164,12 +164,12 @@ This document includes field names and their corresponding types extracted from 
 **Entries fetched:** 3
 
 **Fields:**
-- _id: Unknown
-- alt: Unknown
-- contentfulMetadata: Unknown
-- image: Unknown
-- linkedFrom: Unknown
-- sys: Unknown
+- _id: ID
+- alt: String
+- contentfulMetadata: ContentfulMetadata
+- image: Asset
+- linkedFrom: HomepageLogoLinkingCollections
+- sys: Sys
 
 ---
 
@@ -177,13 +177,13 @@ This document includes field names and their corresponding types extracted from 
 **Entries fetched:** 1
 
 **Fields:**
-- _id: Unknown
-- contentfulMetadata: Unknown
-- linkedFrom: Unknown
-- logosCollection: Unknown
-- name: Unknown
-- sys: Unknown
-- text: Unknown
+- _id: ID
+- contentfulMetadata: ContentfulMetadata
+- linkedFrom: HomepageLogoListLinkingCollections
+- logosCollection: HomepageLogoListLogosCollection
+- name: String
+- sys: Sys
+- text: String
 
 ---
 
@@ -191,14 +191,14 @@ This document includes field names and their corresponding types extracted from 
 **Entries fetched:** 3
 
 **Fields:**
-- _id: Unknown
-- contentfulMetadata: Unknown
-- heading: Unknown
-- image: Unknown
-- linkedFrom: Unknown
-- linksCollection: Unknown
-- sys: Unknown
-- text: Unknown
+- _id: ID
+- contentfulMetadata: ContentfulMetadata
+- heading: String
+- image: Asset
+- linkedFrom: HomepageProductLinkingCollections
+- linksCollection: HomepageProductLinksCollection
+- sys: Sys
+- text: String
 
 ---
 
@@ -206,14 +206,14 @@ This document includes field names and their corresponding types extracted from 
 **Entries fetched:** 1
 
 **Fields:**
-- _id: Unknown
-- contentCollection: Unknown
-- contentfulMetadata: Unknown
-- heading: Unknown
-- kicker: Unknown
-- linkedFrom: Unknown
-- sys: Unknown
-- text: Unknown
+- _id: ID
+- contentCollection: HomepageProductListContentCollection
+- contentfulMetadata: ContentfulMetadata
+- heading: String
+- kicker: String
+- linkedFrom: HomepageProductListLinkingCollections
+- sys: Sys
+- text: String
 
 ---
 
@@ -221,13 +221,13 @@ This document includes field names and their corresponding types extracted from 
 **Entries fetched:** 3
 
 **Fields:**
-- _id: Unknown
-- avatar: Unknown
-- contentfulMetadata: Unknown
-- linkedFrom: Unknown
-- quote: Unknown
-- source: Unknown
-- sys: Unknown
+- _id: ID
+- avatar: Asset
+- contentfulMetadata: ContentfulMetadata
+- linkedFrom: HomepageTestimonialLinkingCollections
+- quote: String
+- source: String
+- sys: Sys
 
 ---
 
@@ -235,13 +235,13 @@ This document includes field names and their corresponding types extracted from 
 **Entries fetched:** 1
 
 **Fields:**
-- _id: Unknown
-- contentCollection: Unknown
-- contentfulMetadata: Unknown
-- heading: Unknown
-- kicker: Unknown
-- linkedFrom: Unknown
-- sys: Unknown
+- _id: ID
+- contentCollection: HomepageTestimonialListContentCollection
+- contentfulMetadata: ContentfulMetadata
+- heading: String
+- kicker: String
+- linkedFrom: HomepageTestimonialListLinkingCollections
+- sys: Sys
 
 ---
 
@@ -249,13 +249,13 @@ This document includes field names and their corresponding types extracted from 
 **Entries fetched:** 1
 
 **Fields:**
-- _id: Unknown
-- contentfulMetadata: Unknown
-- footer: Unknown
-- header: Unknown
-- linkedFrom: Unknown
-- name: Unknown
-- sys: Unknown
+- _id: ID
+- contentfulMetadata: ContentfulMetadata
+- footer: LayoutFooter
+- header: LayoutHeader
+- linkedFrom: LayoutLinkingCollections
+- name: String
+- sys: Sys
 
 ---
 
@@ -263,15 +263,15 @@ This document includes field names and their corresponding types extracted from 
 **Entries fetched:** 1
 
 **Fields:**
-- _id: Unknown
-- contentfulMetadata: Unknown
-- copyright: Unknown
-- linkedFrom: Unknown
-- linksCollection: Unknown
-- metaCollection: Unknown
-- name: Unknown
-- socialLinksCollection: Unknown
-- sys: Unknown
+- _id: ID
+- contentfulMetadata: ContentfulMetadata
+- copyright: String
+- linkedFrom: LayoutFooterLinkingCollections
+- linksCollection: LayoutFooterLinksCollection
+- metaCollection: LayoutFooterMetaCollection
+- name: String
+- socialLinksCollection: LayoutFooterSocialLinksCollection
+- sys: Sys
 
 ---
 
@@ -279,13 +279,13 @@ This document includes field names and their corresponding types extracted from 
 **Entries fetched:** 1
 
 **Fields:**
-- _id: Unknown
-- contentfulMetadata: Unknown
-- cta: Unknown
-- linkedFrom: Unknown
-- name: Unknown
-- navItemsCollection: Unknown
-- sys: Unknown
+- _id: ID
+- contentfulMetadata: ContentfulMetadata
+- cta: HomepageLink
+- linkedFrom: LayoutHeaderLinkingCollections
+- name: String
+- navItemsCollection: LayoutHeaderNavItemsCollection
+- sys: Sys
 
 ---
 
@@ -293,14 +293,14 @@ This document includes field names and their corresponding types extracted from 
 **Entries fetched:** 3
 
 **Fields:**
-- _id: Unknown
-- contentfulMetadata: Unknown
-- description: Unknown
-- href: Unknown
-- icon: Unknown
-- linkedFrom: Unknown
-- sys: Unknown
-- text: Unknown
+- _id: ID
+- contentfulMetadata: ContentfulMetadata
+- description: String
+- href: String
+- icon: Asset
+- linkedFrom: NavItemLinkingCollections
+- sys: Sys
+- text: String
 
 ---
 
@@ -308,12 +308,12 @@ This document includes field names and their corresponding types extracted from 
 **Entries fetched:** 1
 
 **Fields:**
-- _id: Unknown
-- contentfulMetadata: Unknown
-- linkedFrom: Unknown
-- name: Unknown
-- navItemsCollection: Unknown
-- sys: Unknown
+- _id: ID
+- contentfulMetadata: ContentfulMetadata
+- linkedFrom: NavItemGroupLinkingCollections
+- name: String
+- navItemsCollection: NavItemGroupNavItemsCollection
+- sys: Sys
 
 ---
 
@@ -321,19 +321,19 @@ This document includes field names and their corresponding types extracted from 
 **Entries fetched:** 3
 
 **Fields:**
-- _id: Unknown
-- content: Unknown
-- contentBody: Unknown
-- contentfulMetadata: Unknown
-- description: Unknown
-- featured: Unknown
-- image: Unknown
-- linkedFrom: Unknown
-- seoDescription: Unknown
-- seoTitle: Unknown
-- slug: Unknown
-- sys: Unknown
-- title: Unknown
+- _id: ID
+- content: JSON
+- contentBody: NoteContentBody
+- contentfulMetadata: ContentfulMetadata
+- description: String
+- featured: Boolean
+- image: Asset
+- linkedFrom: NoteLinkingCollections
+- seoDescription: String
+- seoTitle: String
+- slug: String
+- sys: Sys
+- title: String
 
 ---
 
@@ -341,16 +341,16 @@ This document includes field names and their corresponding types extracted from 
 **Entries fetched:** 3
 
 **Fields:**
-- _id: Unknown
-- body: Unknown
-- contentfulMetadata: Unknown
-- description: Unknown
-- image: Unknown
-- linkedFrom: Unknown
-- seoTitle: Unknown
-- slug: Unknown
-- sys: Unknown
-- title: Unknown
+- _id: ID
+- body: PageBody
+- contentfulMetadata: ContentfulMetadata
+- description: String
+- image: Asset
+- linkedFrom: PageLinkingCollections
+- seoTitle: String
+- slug: String
+- sys: Sys
+- title: String
 
 ---
 
@@ -358,11 +358,11 @@ This document includes field names and their corresponding types extracted from 
 **Entries fetched:** 3
 
 **Fields:**
-- _id: Unknown
-- contentfulMetadata: Unknown
-- linkedFrom: Unknown
-- service: Unknown
-- sys: Unknown
-- username: Unknown
+- _id: ID
+- contentfulMetadata: ContentfulMetadata
+- linkedFrom: SocialLinkLinkingCollections
+- service: String
+- sys: Sys
+- username: String
 
 ---

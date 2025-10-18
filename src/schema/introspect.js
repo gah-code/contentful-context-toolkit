@@ -11,7 +11,17 @@ const query = `
       types {
         name
         kind
-        fields { name }
+        fields {
+          name
+          type {
+            name
+            kind
+            ofType {
+              name
+              kind
+            }
+          }
+        }
       }
     }
   }

@@ -1,6 +1,6 @@
 # 🧩 Contentful Context Toolkit
 
-A lightweight Node.js utility for introspecting your Contentful GraphQL API, extracting your content type map, fetching live content snapshots, and auto-generating Markdown schema documentation.
+A lightweight Node.js utility for introspecting your Contentful GraphQL API, extracting your content type map, fetching live content snapshots, and generating field-aware Markdown schema documentation — all in one automated workflow.
 
 ---
 
@@ -31,7 +31,7 @@ CONTENTFUL_CDA_TOKEN=your_content_delivery_token
 #### Individual commands
 
 ```bash
-npm run introspect      # Fetch schema from Contentful
+npm run introspect      # Fetch full schema from Contentful (with field types)
 npm run generate-map    # Generate content type map
 npm run fetch-content   # Fetch sample content entries
 npm run docs            # Build Markdown schema documentation
@@ -52,6 +52,7 @@ npm run context-docs
 ```
 
 Runs the entire workflow plus documentation generation.
+You’ll get clean, field-aware documentation for every content type.
 
 ---
 
@@ -59,12 +60,33 @@ Runs the entire workflow plus documentation generation.
 
 All generated files appear in `src/data/` and `docs/`:
 
-| File                             | Description                                                     |
-| -------------------------------- | --------------------------------------------------------------- |
-| `src/data/schema.json`           | Full GraphQL schema                                             |
-| `src/data/content_map.json`      | Simplified type → field map                                     |
-| `src/data/content_snapshot.json` | Sample content data                                             |
-| `docs/schema_docs.md`            | Auto-generated Markdown schema documentation (with field types) |
+| File                             | Description                                             |
+| -------------------------------- | ------------------------------------------------------- |
+| `src/data/schema.json`           | Full GraphQL schema (includes field types)              |
+| `src/data/content_map.json`      | Simplified type → field map                             |
+| `src/data/content_snapshot.json` | Sample content data from your space                     |
+| `docs/schema_docs.md`            | Markdown schema documentation with accurate field types |
+
+---
+
+### ✅ Example Output
+
+```markdown
+## BlogPost
+**Entries fetched:** 3
+
+**Fields:**
+- _id: ID  
+- title: String  
+- slug: String  
+- excerpt: String  
+- body: JSON  
+- author: Entry  
+- image: Asset  
+- seoTitle: String  
+- seoDescription: String  
+- date: DateTime  
+```
 
 ---
 
@@ -84,16 +106,17 @@ All generated files appear in `src/data/` and `docs/`:
 
 ## 🧭 Update Tracker
 
-| Date       | Update                | Notes                                                    |
-| ---------- | --------------------- | -------------------------------------------------------- |
-| 2025-10-16 | Initial scaffold      | Schema → map → snapshot workflow                         |
-| 2025-10-17 | Enriched fetch        | Added filtered content queries and folder auto-creation  |
-| 2025-10-17 | Docs generator        | Added Markdown documentation generation (`npm run docs`) |
-| 2025-10-17 | Unified pipeline      | Added `context-docs` full sync command                   |
-| *TBD*      | CLI commands          | Add `context introspect`, `context fetch` aliases        |
-| *TBD*      | Relationship mapping  | Map cross-type links and references                      |
-| *TBD*      | Visualization support | Export schema for GraphQL Voyager                        |
-| *TBD*      | Type generation       | Add GraphQL Codegen for TypeScript models                |
+| Date       | Update                | Notes                                                       |
+| ---------- | --------------------- | ----------------------------------------------------------- |
+| 2025-10-16 | Initial scaffold      | Schema → map → snapshot workflow                            |
+| 2025-10-17 | Enriched fetch        | Added filtered content queries and folder auto-creation     |
+| 2025-10-17 | Docs generator        | Added Markdown documentation generator (`npm run docs`)     |
+| 2025-10-17 | Unified pipeline      | Added `context-docs` full sync command                      |
+| 2025-10-18 | Field types resolved  | Updated introspection query to capture accurate field types |
+| *TBD*      | CLI commands          | Add `context introspect`, `context fetch` aliases           |
+| *TBD*      | Relationship mapping  | Map cross-type links and references                         |
+| *TBD*      | Visualization support | Export schema for GraphQL Voyager                           |
+| *TBD*      | Type generation       | Add GraphQL Codegen for TypeScript models                   |
 
 ---
 
@@ -101,6 +124,7 @@ All generated files appear in `src/data/` and `docs/`:
 
 * [x] Add GraphQL schema documentation generator
 * [x] Combine full pipeline (`context-docs`)
+* [x] Fix field type resolution in documentation
 * [ ] Add CLI command aliases (`context introspect`, `context fetch`)
 * [ ] Add GraphQL Voyager visualization output
 * [ ] Implement relationship mapping between content types
@@ -128,7 +152,7 @@ Stay modular. Keep your data clear. And always know your content universe.
 
 * **Never commit `.env`** — use `.env.example` for shared configs.
 * **Keep your CDA token private** — treat it like a password.
-* Use `npm run context-docs` before each commit to ensure your docs stay up-to-date.
+* Run `npm run context-docs` before each commit to ensure your docs stay up-to-date.
 * Generated files in `src/data/` are reproducible — do not version them.
 
 ---
@@ -141,4 +165,3 @@ Maintained by **Contentful Context Toolkit contributors**
 ```
 
 ---
-
