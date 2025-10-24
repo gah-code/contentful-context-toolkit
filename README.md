@@ -1,12 +1,10 @@
 
 # 🧩 Contentful Context Toolkit
 
-# 🧩 Contentful Context Toolkit
-
 ![Node.js](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
-![Build Status](https://github.com/gilbertharo/contentful-context-toolkit/actions/workflows/ci.yml/badge.svg)
-![Last Commit](https://img.shields.io/github/last-commit/gilbertharo/contentful-context-toolkit.svg)
+[![Build Status](https://github.com/gah-code/contentful-context-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/gah-code/contentful-context-toolkit/actions)
+![Last Commit](https://img.shields.io/github/last-commit/gah-code/contentful-context-toolkit.svg)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)
 ![Made with](https://img.shields.io/badge/made%20with-Contentful-orange)
 
