@@ -1,6 +1,6 @@
 # 🧩 Contentful Schema Documentation (with Field Types)
 
-Generated on: 10/24/2025, 1:02:26 AM
+Generated on: 10/24/2025, 1:18:24 AM
 
 This document includes field names and their corresponding types extracted from your Contentful GraphQL schema.
 
