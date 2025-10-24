@@ -9,7 +9,8 @@
     "fetch-content": "node src/queries/fetchAllContent.js",
     "context": "npm run introspect && npm run generate-map && npm run fetch-content",
     "docs": "node src/docs/generateDocs.js",
-    "context-docs": "npm run context && npm run docs"
+    "context-docs": "npm run context && npm run docs",
+    "context": "node src/cli/index.js"
   },
   "dependencies": {
     "graphql-request": "^7.0.0",
